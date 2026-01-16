@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人生三万天</title>
+    <link rel="stylesheet" href="life-30000-days.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>人生三万天</h1>
+            <p class="subtitle">每一天都值得珍惜</p>
+        </header>
+
+        <div class="input-section">
+            <label for="birthdate">请输入你的出生日期：</label>
+            <input type="date" id="birthdate" />
+            <button id="calculate">计算</button>
+        </div>
+
+        <div class="stats-section" id="statsSection" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-label">已度过</div>
+                <div class="stat-value" id="daysLived">0</div>
+                <div class="stat-unit">天</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">剩余</div>
+                <div class="stat-value" id="daysRemaining">30000</div>
+                <div class="stat-unit">天</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">人生进度</div>
+                <div class="stat-value" id="percentage">0%</div>
+            </div>
+            <div class="stat-card countdown">
+                <div class="stat-label">距离三万天还有</div>
+                <div class="countdown-display">
+                    <span id="countdownDays">0</span>天
+                    <span id="countdownHours">0</span>时
+                    <span id="countdownMinutes">0</span>分
+                    <span id="countdownSeconds">0</span>秒
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-section" id="gridSection" style="display: none;">
+            <div class="grid-controls">
+                <div class="grid-legend">
+                    <div class="legend-item">
+                        <span class="legend-color lived"></span>
+                        <span>已度过</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color remaining"></span>
+                        <span>未来</span>
+                    </div>
+                </div>
+                <div class="view-toggle">
+                    <button class="toggle-btn active" data-view="week">按周展示</button>
+                    <button class="toggle-btn" data-view="day">按日展示</button>
+                </div>
+            </div>
+            <div class="grid-info" id="gridInfo">
+                <span id="gridInfoText">每个方块代表 1 周 (7天)</span>
+            </div>
+            <div class="grid-container" id="gridContainer"></div>
+        </div>
+    </div>
+
+    <script src="life-30000-days.js"></script>
+</body>
+</html>
